@@ -7,11 +7,11 @@ function App() {
     let password = ''
 
     const onInputChange = (e) => {
-       if (e.target.type === 'text') {
-           email = e.target.value
-       } else {
-           password = e.target.value
-       }
+        if (e.target.type === 'text') {
+            email = e.target.value
+        } else {
+            password = e.target.value
+        }
     }
 
 
@@ -19,8 +19,9 @@ function App() {
         e.preventDefault()
         if (email && password) {
             e.target.reset()
-            console.log({ email, password })
-
+            console.log({email, password})
+            email = ''
+            password = ''
         } else {
             alert('Заполните форму')
         }
