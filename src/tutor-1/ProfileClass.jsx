@@ -1,19 +1,19 @@
 import {Component} from "react";
 import React from 'react';
-import '../index.css'
+import './tutor-1.css'
 
 class ProfileClass extends Component {
 
     getMonths() {
-        return ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-            "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        return ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+            "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
     }
 
     render() {
         return (
             <div className='time'>
-                <h1>Привет, {this.props.name}</h1>
-                <span>Дата регистрации:{this.props.registredAt.getDate()} {this.getMonths()[this.props.registredAt.getMonth()]} {this.props.registredAt.getFullYear()}</span>
+                <span>Привет, <b>{this.props.name.split(' ')[0]}!</b></span>
+                <span>Дата регистрации: {this.props.registredAt.getDate()} {this.getMonths()[this.props.registredAt.getMonth()]} {this.props.registredAt.getFullYear()}</span>
             </div>
         )
     }

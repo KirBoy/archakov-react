@@ -1,6 +1,7 @@
 import Profile from "./Profile";
 import React from 'react';
 import ProfileClass from "./ProfileClass";
+import './tutor-1.css'
 
 function App() {
     return (

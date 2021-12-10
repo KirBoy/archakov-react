@@ -1,16 +1,16 @@
 import React from "react";
-import '../index.css'
+import './tutor-1.css'
 
 function Profile(props) {
 
-    const month =  ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+    const month =  ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня",
+        "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
 
 
     return (
         <div className='time'>
-            <h1>Привет, {props.name}</h1>
-            <span>Дата регистрации:{props.registredAt.getDate()} {month[props.registredAt.getMonth()]} {props.registredAt.getFullYear()}</span>
+            <span>Привет, <b>{props.name.split(' ')[0]}!</b></span>
+            <span>Дата регистрации: {props.registredAt.getDate()} {month[props.registredAt.getMonth()]} {props.registredAt.getFullYear()}</span>
         </div>
     )
 }
