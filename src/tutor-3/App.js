@@ -4,7 +4,7 @@ let ul = document.querySelector('ul')
 
 function render() {
     ul.innerHTML = ''
-    tasks.forEach((el, i) => document.querySelector('ul').insertAdjacentHTML('afterbegin', `<li>${el} <button data-i=${i}>-</button></li>`))
+    tasks.forEach((el, i) => ul.insertAdjacentHTML('afterbegin', `<li>${el} <button data-i=${i}>-</button></li>`))
     ul.querySelectorAll('button').forEach(el => el.onclick = removeTask)
 }
 
