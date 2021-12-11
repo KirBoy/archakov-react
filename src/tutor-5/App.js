@@ -44,22 +44,7 @@ function App() {
     })
 
     const onInputChange = (e) => {
-        if (e.target.name === 'name') {
-            setInputValue({
-                ...inputValue,
-                fullName: e.target.value,
-            })
-        } else if (e.target.name === 'email') {
-            setInputValue({
-                ...inputValue,
-                email: e.target.value,
-            })
-        } else {
-            setInputValue({
-                ...inputValue,
-                text: e.target.value
-            })
-        }
+        setInputValue({ ...inputValue, [e.target.name]: e.target.value});
     }
 
     const feedbackSubmit = (e) => {
@@ -106,11 +91,11 @@ function App() {
                 </div>
                 <form className="feedback__bottom" onSubmit={feedbackSubmit}>
                     <h2 className="feedback__title">Обратная связь:</h2>
-                    <input name='name' type="text" className="feedback__input" value={inputValue.fullName}
+                    <input name='fullName' type="text" className="feedback__input" value={inputValue.fullName}
                            placeholder='Имя' onChange={onInputChange}/>
                     <input name='email' type="text" className="feedback__input" value={inputValue.email}
                            placeholder='Потча' onChange={onInputChange}/>
-                    <textarea name='feedback' id="" cols="30" rows="10" className="feedback__text"
+                    <textarea name='text' id="" cols="30" rows="10" className="feedback__text"
                               placeholder='Текс...' value={inputValue.text} onChange={onInputChange}>
                     </textarea>
                     <button className="feedback__btn" type='submit'>Отправить</button>
