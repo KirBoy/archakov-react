@@ -1,0 +1,19 @@
+.container {
+  font-size: 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback {
+  max-width: 500px;
+}
+
+input {
+  display: block;
+}
+
+textarea {
+  display: block;
+}
