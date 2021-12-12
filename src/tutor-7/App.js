@@ -88,7 +88,9 @@ function App() {
                 <Button onClick={handleSubmit(onSubmit)} variant="contained" color="primary">
                     Зарегистрироваться
                 </Button>
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" onClick={()=> {
+                    reset()
+                }}>
                     Очистить
                 </Button>
             </div>
