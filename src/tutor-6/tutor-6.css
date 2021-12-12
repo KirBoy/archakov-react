@@ -1,0 +1,17 @@
+.container {
+  font-size: 25px;
+  box-sizing: border-box;
+
+}
+
+.feedback {
+  max-width: 500px;
+}
+
+input {
+  display: block;
+}
+
+textarea {
+  display: block;
+}
