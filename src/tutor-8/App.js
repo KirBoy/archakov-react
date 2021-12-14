@@ -17,7 +17,7 @@ function App() {
 
     return (
         <>
-            {users.map(el => <h1 key={el.id}>{el.name}</h1>)}
+            {users.map(el => <h2 key={el.id}>{el.name}</h2>)}
             <button onClick={getUsers}>Запросить пользователей</button>
 
         </>
